@@ -3,19 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ImageMap</title>
+    <style>
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: crimson;
+        }
+        div{
+            text-align: center;
+        }
+        
+    </style>
 </head>
 <body>
-    <p>It is an examople of Image Map</p>
-    <img src="" width="400px" height="140px" alt="Planet mEnu" usemap="#map1">
+    <div>
+    <h2>FullStack's backbones</h2>
+    <img src="img/fullstack.png" width="40%" height="40%" alt="FulStack" usemap="#map1" border="2px">
 
-    <map name="map1" id="map1"></map>
-    <area shape="circle" coords="71,64,44" href="mars.htm" alt="Mars Planet" target="_blank"> 
+    <map name="map1" id="map1">
+    <area shape="rect" coords="20,16,213,208" href="https://en.wikipedia.org/wiki/HTML" alt="HTML" target="_blank"> 
 
-    <map name="map1" id="map1"></map>
-    <area shape="circle" coords="71,64,44" href="mars.htm" alt="Mars Planet" target="_blank"> 
+    
+    <area shape="rect" coords="270,14,511,254" href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" alt="CSS" target="_blank"> 
 
-    <map name="map1" id="map1"></map>
-    <area shape="circle" coords="71,64,44" href="mars.htm" alt="Mars Planet" target="_blank"> 
+    
+    <area shape="rect" coords="13,247,235,469" href="https://en.wikipedia.org/wiki/JavaScript" alt="JavaScript" target="_blank"> 
+
+    
+    <area shape="rect" coords="289,274,568,552" href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)" alt="BootStrap" target="_blank"> </map>
+</div>
 </body>
 </html>
