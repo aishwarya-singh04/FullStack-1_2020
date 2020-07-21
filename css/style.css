@@ -1,0 +1,22 @@
+p{
+    color: steelblue;
+    border: 2px solid palevioletred;
+    padding: 10px;
+}
+h1{
+        color: goldenrod;
+        background-color: peachpuff;
+        color: gray;
+}
+h2{
+    color: indianred;
+    text-decoration: dotted;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font: 2em sans-serif;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
