@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Navigation</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header{
+            background-color: gray;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .header h2{
+            color: white;
+            line-height: 70px;
+            text-transform: uppercase;
+        }
+        .menu{
+            list-style: none;
+            text-align: center;
+        }
+
+        .menu li{
+            display: inline-block;
+            line-height: 70px;
+            position: relative;
+        }
+
+        .menu li a{
+            display: block;
+            text-decoration: none;
+            color: white;
+            /*padding: 10px 20px;*/
+            font-size: 18px ;
+            width: 150px;
+            transition: 0.7s;
+        }
+
+        .menu li a:hover{
+            background-color: orangered;
+        }
+
+        .submenu1{
+            position: absolute;
+            background-color: gray;
+            width: 150px;
+            left: 0;
+            display: none;
+        }
+
+        .submenu2{
+            position: absolute;
+            background-color: grey;
+            width: 150px;
+            left: 100%;
+            top: 0;
+            display: none;
+        }
+
+        .menu li:hover .submenu1{
+            display: block;
+        }
+        .submenu1 li:hover .submenu2{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Beta-Labs</h2>
+        <ul class="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Service</a>
+                <ul class="submenu1">
+                    <li><a href="#">Front-End</a>
+                        <ul class="submenu2">
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Back-End</a>
+                        <ul class="submenu2">
+                            <li><a href="#">NodeJs</a></li>
+                            <li><a href="#">PHP</a></li>
+                            <li><a href="#">Python</a></li>
+                            <li><a href="#">Java</a></li>
+                            <li><a href="#">Ruby</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+</body>
+</html>
