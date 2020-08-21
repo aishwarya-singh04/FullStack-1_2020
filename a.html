@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Responsive Nvigation Bar Vertical</title>
+    <title>Responsive Nagtvigation Bar Vertical</title>
     <style>
          *{
             padding: 0;
@@ -33,12 +33,12 @@
             z-index: -10;
         }
         .show-btn, .hide-btn{
-            /*display: block;*/
+            display: block;
             font-size: 30px;
             color: white;
             line-height: 70px;
             transition: .4s;
-
+            
             position: absolute;
             left: 20px;
             top: 2px;
@@ -48,37 +48,44 @@
         }
         #check:checked ~ .menu{
             left: 0;
-            
-
         }
+        #check:checked ~ .show-btn{
+            opacity: 0;
+        }
+        #check:checked ~ .hide-btn{
+            opacity: 1;
+        }
+
+        #check:checked ~ .content{
+            width: 80%;
+        }
+
         .menu{
             position: fixed;
             top: 70px;
             left: -100%;          /*slider-effect*/
-            width: 30%;
+            width: 28%;
             height: 100vh;
             background-color:#333;
             text-align: left;
             padding: 10px 0px;
             transition: .7s;
             line-height: normal;
-            
-            
-            }
+        }
             
         .menu li{
             display: block;
-            line-height: 70px;
+            line-height: 55px;
+            border-bottom: 1px solid grey;
            
         }
         .menu li a{
-            /*display: block;*/
+            display: block;
             text-decoration: none;
             color: white;
-            font-size: 20px;
+            font-size: 18px;
             text-transform: uppercase;
             padding: 0px 20px;
-            
             transition: .4s;
         }
         
@@ -86,14 +93,17 @@
              position: absolute;
              left: 20px;
              top: 2px;
+             opacity: 0;
         }
         .show-btn{
             position: absolute;
             left: 20px;
             top: 2px;
+            opacity: 1;
             
         }
         .content{
+            width: 100%;
             padding:95px 20px;
         }
         .content img{
@@ -118,20 +128,23 @@
         </label>
         
         <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <hr style="size: 0.6px; color: rgb(138, 138, 141);">
+            <li ><a href="#">Home</a></li>
+          
             <li><a href="#">About</a></li>
-            <hr>
+            
             <li><a href="#">Services</a></li>
-            <hr>
+            
             <li><a href="#">Blog</a></li>
-            <hr>
+            
             <li><a href="#">Contact</a></li>
-            <hr>
-         <!---  <label for="check" class="hide-btn">
-                
-                <i class="fa fa-times"></i>
-            </label> --> 
+
+            <!--<li>
+                <i class="fa fa-facebook-square"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-youtube-square"></i>
+            </li>-->
+            
+        
         </ul>
         <label for="check" class="hide-btn">
                 
