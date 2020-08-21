@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Responsive Nagtvigation Bar Vertical</title>
+    <title>Responsive Navigation Bar Vertical</title>
     <style>
          *{
             padding: 0;
@@ -43,7 +43,7 @@
             left: 20px;
             top: 2px;
         }
-        .menu li a:hover, .show-btn:hover, .hide-btn:hover{
+        .menu li a:hover, .show-btn:hover, .hide-btn:hover, .menu li i:hover{
             color: skyblue;
         }
         #check:checked ~ .menu{
@@ -57,7 +57,7 @@
         }
 
         #check:checked ~ .content{
-            width: 80%;
+            width: 50%;
         }
 
         .menu{
@@ -116,6 +116,12 @@
         .content p{
             text-align: justify;
         }
+        .menu li i{
+            font-size: 30px;
+            padding-left: 10px;
+            padding-right: 10px ;
+            line-height: 55px;
+        }
         
     </style>
 </head>
@@ -138,11 +144,11 @@
             
             <li><a href="#">Contact</a></li>
 
-            <!--<li>
+            <li style="color: white; text-align: center;">
                 <i class="fa fa-facebook-square"></i>
                 <i class="fa fa-instagram"></i>
                 <i class="fa fa-youtube-square"></i>
-            </li>-->
+            </li>
             
         
         </ul>
