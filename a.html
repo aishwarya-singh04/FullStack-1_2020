@@ -43,7 +43,11 @@
             left: 20px;
             top: 2px;
         }
-        .menu li a:hover, .show-btn:hover, .hide-btn:hover, .menu li i:hover{
+        .menu li a:hover{
+            
+            border-left: 10px solid white;
+        }
+        .menu li i:hover, .social-sites li i:hover , .show-btn:hover, .hide-btn:hover{
             color: skyblue;
         }
         #check:checked ~ .menu{
@@ -58,26 +62,24 @@
 
         #check:checked ~ .content{
             width: 80%;
-            float: right;
-            
         }
 
         .menu{
             position: fixed;
             top: 70px;
             left: -100%;          /*slider-effect*/
-            width: 28%;
+            width: 20%;
             height: 100vh;
             background-color:#333;
             text-align: left;
-            padding: 10px 0px;
+            /*padding: 10px 0px;*/
             transition: .7s;
             line-height: normal;
         }
             
         .menu li{
             display: block;
-            line-height: 55px;
+            line-height: 60px;
             border-bottom: 1px solid grey;
            
         }
@@ -90,7 +92,9 @@
             padding: 0px 20px;
             transition: .4s;
         }
-        
+        .menu li i{
+            margin-right: 15px;
+        }
         .hide-btn{
              position: absolute;
              left: 20px;
@@ -104,14 +108,12 @@
             opacity: 1;
             
         }
-        /*.content::after{
-            content: '';
-            display: flex;
-            clear: both;
-        }*/
+        
         .content{
             width: 100%;
             padding:95px 20px;
+            float: right;
+            transition: .7s;
         }
         .content img{
             width: 100%;
@@ -123,17 +125,33 @@
         .content p{
             text-align: justify;
         }
-        .menu li i{
+        .menu .social-sites li i{
             font-size: 30px;
             padding-left: 10px;
             padding-right: 10px ;
             line-height: 55px;
+           
+        }
+        .menu .social-sites li {
+            margin-top: 230px;
+            border-top: 1px solid grey;
+        
+        }
+        @media(max-width: 768px) {
+            .menu{
+                width: 100%;
+                text-align: center;
+            }
+            .menu .social-sites li{
+                margin-top: 600px;
+            }
         }
         
     </style>
 </head>
 <body>
     <div class="header">
+        <img src="img/" alt="">
         <h2>FULLSTACK</h2>
         <input type="checkbox" id="check">
         <label for="check" class="show-btn">
@@ -141,24 +159,25 @@
         </label>
         
         <ul class="menu">
-            <li ><a href="#">Home</a></li>
+            <li ><a href="#"><i class="fa fa-home"></i>Home</a></li>
           
-            <li><a href="#">About</a></li>
+            <li><a href="#"><i class="fa fa-user"></i>About</a></li>
             
-            <li><a href="#">Services</a></li>
+            <li><a href="#"><i class="fa fa-tasks"></i>Services</a></li>
             
-            <li><a href="#">Blog</a></li>
+            <li><a href="#"><i class="fa fa-rss"></i>Blog</a></li>
             
-            <li><a href="#">Contact</a></li>
-
-            <li style="color: white; text-align: center;">
-                <i class="fa fa-facebook-square"></i>
-                <i class="fa fa-instagram"></i>
-                <i class="fa fa-youtube-square"></i>
-            </li>
+            <li><a href="#"><i class="fa fa-id-card"></i>Contact</a></li>
             
-        
+            <ul class="social-sites">
+                <li style="color: white; text-align: center;">
+                    <i class="fa fa-facebook-square"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-youtube-square"></i>
+                </li>
+            </ul>
         </ul>
+        
         <label for="check" class="hide-btn">
                 
             <i class="fa fa-times"></i>
