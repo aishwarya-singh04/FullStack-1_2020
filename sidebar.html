@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .header{
+            width: 100%;
+            height: 70px;
+            background-color: #2f3640;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+        }
+        .header img{
+            width: 70px;
+            height: 70px;
+        }
+        .header h2{
+            line-height: 70px;
+            color: white;
+
+        }
+        .content{
+            width: 100%;
+            padding: 20px;
+            float: right;
+            transition: .7s;
+        }
+        .content img{
+            width: 100%;
+            max-width: 700px;
+            display: block;
+            margin: auto;
+            margin-bottom: 20px;
+            margin-top: 70px;
+        }
+        .content p{
+            text-align: justify;
+        }
+        .sidebar{
+            width: 20%;
+            height: 100vh;
+            position: fixed;
+            top: 70px;
+            left: -100%;
+            background-color: #353b48;
+            transition: .7s;
+        }
+        .sidebar ul{
+            list-style: none;
+        }
+        .sidebar ul li{
+            border-bottom: 2px solid rgba(255, 255, 255, .1);
+        }
+        .sidebar ul li a{
+            display: block;
+            text-decoration: none;
+            color: white;
+            font-style: 20px;
+            padding:  15px 25px;
+            transition: .4s;
+        }
+        a i{
+            margin-right: 15px;
+        }
+        .sidebar li a:hover{
+            
+            border-left: 10px solid white;
+        }
+        .social{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 30px;
+            border-bottom: 2px solid rgba(255, 255, 255, .1);
+            border-top: 2px solid rgba(255, 255, 255, .1);
+            padding: 15px 25px;
+            margin-top: 280px;
+        }
+
+        i{
+            font-size: 30px;
+            color: white;
+        }
+
+        .show-btn,  .hide-btn{
+            font-size: 30px;
+            position: fixed;
+            line-height: 70px;
+            top: 2px;
+            left: 20px;
+        }
+        #check{
+            position: absolute;
+         
+            visibility: hidden;
+            z-index: -10;
+        }
+
+        #check:checked ~ .sidebar{
+            left: 0;
+        }
+        #check:checked ~ .show-btn{
+            opacity: 0;
+        }
+        #check:checked ~ .hide-btn{
+            opacity: 1;
+        }
+
+        #check:checked ~ .content{
+            width: 80%;
+        }
+
+        .hide-btn{
+             /*position: absolute;
+             left: 20px;
+             top: 2px;*/
+             opacity: 0;
+        }
+        /*.show-btn{
+            position: absolute;
+            left: 20px;
+            top: 2px;
+            opacity: 1;
+            
+        }*/
+        @media(max-width: 768px) {
+            .sidebar{
+                width: 100%;
+                text-align: center;
+            }
+            .sidebar .social li{
+                margin-top: 600px;
+            }
+            .header h2{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="img/logo.png" alt="">
+        <h2>FULLSTACK</h2>
+    </div>
+    <input type="checkbox" id="check">
+        <label for="check" class="show-btn">
+            <i class="fa fa-bars" ></i>
+        
+        </label>
+        <label for="check" class="hide-btn">
+            <i class="fa fa-times" ></i>
+        
+        </label>
+    <div class="content">
+        <img src="img/water.jpg" alt="">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit nisi ipsam dolorem molestiae totam. Voluptatibus enim pariatur consequuntur, minima quod totam assumenda adipisci beatae voluptas saepe facilis illo voluptatum quis, fugit perferendis atque quisquam. Beatae, hic! Sunt, debitis. Dolores debitis, reprehenderit praesentium error veniam consequatur qui sapiente hic in deserunt repellat nemo, eveniet ratione animi laboriosam labore totam iste optio velit, quos soluta? Laborum vitae blanditiis delectus! Iure delectus praesentium maiores quae culpa veniam, rerum cumque totam voluptate recusandae ea, commodi magnam dignissimos corrupti natus iste ad sequi porro sapiente nobis perspiciatis, fugiat dolores nostrum? Esse pariatur accusamus ut sed voluptas nemo porro unde fuga ex quos nobis cupiditate provident repellendus sit, fugiat deserunt, molestias maxime minus rerum officia optio dolorem nesciunt quibusdam velit? Tempora, cum odio. Ipsum, sequi inventore? Obcaecati praesentium ipsam porro inventore, esse ut aperiam assumenda delectus repellat dignissimos id adipisci officia illo, explicabo corrupti maxime accusantium impedit! Dignissimos, laboriosam ratione? Eveniet ad consequatur expedita libero nulla. Iusto natus sed cupiditate distinctio corrupti commodi ullam quisquam laborum. Dolore voluptates facere odit eius amet rem ut optio illo quibusdam nam delectus, quos quod voluptatem! Officia incidunt nobis eum sit voluptatem, fugit maiores, dolorum doloribus nulla reiciendis est natus, fuga qui facere. Quo fugit velit id nulla ex voluptatibus eveniet atque ad quam corporis repellat pariatur, in delectus sit aliquid veniam possimus modi? Hic qui magni modi dicta minus. Possimus explicabo velit quos tempora laudantium assumenda quam placeat vero odit veritatis nihil, molestiae quidem dignissimos dolorum quia hic nulla ipsa? Sapiente consequatur officiis labore sed quasi dolorum corporis blanditiis aut repudiandae, eligendi ad eveniet. Vero est, et officiis earum ea, dicta facilis voluptates ducimus, voluptatibus culpa debitis ratione! Possimus provident accusantium nesciunt hic eum cumque facilis amet, in harum velit, obcaecati exercitationem tempore. Quidem culpa corporis quibusdam id delectus amet molestias unde voluptate quasi eius tenetur dolor, consequatur optio sapiente numquam sit autem ducimus! Nisi culpa fugit itaque doloribus voluptatem, eum, architecto perferendis id expedita ea dolores debitis perspiciatis tempore suscipit, totam sequi? Voluptatum libero aliquid temporibus quaerat quam cupiditate sapiente odio magnam dolorem ab harum saepe laudantium maxime delectus esse ipsa praesentium impedit inventore mollitia voluptates numquam, cum excepturi quae. Temporibus suscipit at aut esse assumenda alias vero velit est aliquid dolores, aliquam deleniti quo doloremque repellat odio id error deserunt nisi eveniet animi odit mollitia eaque ea ratione! Officia eos est ex, esse expedita autem nemo praesentium. Harum necessitatibus repudiandae odit iure vero tempore doloremque molestias, minima aspernatur reiciendis dignissimos, possimus quisquam aliquid quas voluptatem voluptates suscipit quo temporibus quidem vel? Dolorum molestiae eaque explicabo? Perspiciatis, quo nemo optio quos autem inventore alias dicta suscipit dolorem corporis rerum! Enim consectetur voluptate tempora autem molestias sequi quam, nostrum laborum amet provident, quasi ullam. Facere, impedit nobis! Deserunt, exercitationem sint. Dolor animi mollitia nostrum vero, deserunt laudantium, natus rem quos cupiditate veritatis corporis sapiente similique distinctio, numquam iste nam facere unde cum quam obcaecati id magni earum ex sunt. Dolorem officia aliquam harum repellat hic illo eaque dolorum voluptatibus?</p>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li ><a href="#"><i class="fa fa-home"></i>Home</a></li>
+          
+            <li><a href="#"><i class="fa fa-user"></i>About</a></li>
+            
+            <li><a href="#"><i class="fa fa-tasks"></i>Services</a></li>
+            
+            <li><a href="#"><i class="fa fa-rss"></i>Blog</a></li>
+            
+            <li><a href="#"><i class="fa fa-id-card"></i>Contact</a></li>
+        </ul>
+        <div class="social">
+            <a href=""><i class="fa fa-facebook-square"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+            <a href=""><i class="fa fa-youtube-square"></i></a>
+        </div>
+    </div>
+</body>
+</html>
