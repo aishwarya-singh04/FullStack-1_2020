@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tags</title>
+    <style>
+        table{
+            border-collapse: collapse;
+           /* width: 800px;*/
+            /*text-align: center;*/
+            background-color: rgb(245, 245, 151);
+           
+        
+        }
+        th{
+            background-color: rgb(105, 105, 105);
+            color: white;
+        }
+        tfoot tr{
+            background-color: lightgrey !important;
+        }
+
+        tr:nth-child(even){
+            background-color:whitesmoke;
+        }
+
+        tr:nth-child(odd){
+            background-color: darkseagreen;
+        }
+
+        /*no use of tr*/
+        table, td, tr, th{                                  
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+
+        }
+        caption{
+            caption-side: bottom;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <table width="800px" align="center">
+    <caption>List of courses</caption>
+    <thead>
+        <tr>
+            <th>Course Name</th>
+            <th>Course Duration</th>
+            <th>Course Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Programming languages</td>
+            <td>2 months</td>
+            <td>Rs. 500/-</td>
+        </tr>
+        <tr>
+            <!--<td rowspan="2">Web development-->
+                <td>Web development
+            <!--<table align="center">
+                <tr>
+                    <td>Front-End</td>
+                    <td>Back-end</td>
+                </tr>
+            </table>-->
+            </td>
+            <td style="width: 100px;">4 months</td>
+            <td>Rs. 15000/-</td>
+        </tr>
+        <tr>
+            <!--<td>Server side Programming</td>-->
+            <td>Server side Programming
+            <td>6 months</td>
+            <td>Rs. 25000/-</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <!--<td></td>-->
+            <td colspan="2">Total cost</td>
+            <td>Rs. 45000/-</td>
+        </tr>
+    </tfoot>
+    </table>
+
+    <hr>
+
+    <table width="800px" align="center">
+        <caption>List of courses</caption>
+        <!--commnet all the css applied in head section-->
+        <colgroup span="2" style="background-color: lightgrey;"></colgroup>
+        <thead>
+            <tr>
+                <th>Course Name</th>
+                <th>Course Duration</th>
+                <th>Course Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Programming languages</td>
+                <td>2 months</td>
+                <td>Rs. 500/-</td>
+            </tr>
+            <tr>
+                
+                <td>Web development
+            
+                </td>
+                <td style="width: 100px;">4 months</td>
+                <td>Rs. 15000/-</td>
+            </tr>
+            <tr>
+               
+                <td>Server side Programming
+                <td>6 months</td>
+                <td>Rs. 25000/-</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                
+                <td colspan="2">Total cost</td>
+                <td>Rs. 45000/-</td>
+            </tr>
+        </tfoot>
+        </table>
+</body>
+</html>
