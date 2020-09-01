@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 80%;
+            margin: 20px auto;
+            /*background-color:orange;*/
+            border: 2px solid darkblue;
+        }
+        /*tr:nth-child(even){
+            background-color:antiquewhite;
+        }*/
+        tr:first-child th{
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+        }
+        th{
+            background-color: white;
+            color: darkblue;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left;
+        }
+        
+        table, tr, td, th{
+            border-bottom: 1px solid darkblue;
+            border-spacing: 10px;
+            /*border-spacing: 0px;*/
+            border-collapse: collapse;
+            padding: 10px;
+        }
+        tr:hover{
+            background-color: rgba(0, 0, 75, 0.76);
+            color: white;
+            transition: .4s;
+        }
+    </style>
+</head>
+<body>
+    
+    <table>
+        <caption>
+            Topic Coverage Report
+        </caption>
+        <tr>
+            <th colspan="3">Lecture Course Coverage</th>
+        </tr>
+        <tr>
+            <th>#</th>
+            <th>Topic</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Introduction to Table</td>
+            <td>Delivered</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>HTML5 Semantic Tags</td>
+            <td>Delivered</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Responsive Navigation Bar</td>
+            <td>Delivered</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Responsive Side Bar</td>
+            <td>Delivered</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Introduction to Animation</td>
+            <td>Pending</td>
+        </tr>
+    </table>
+</body>
+</html>
