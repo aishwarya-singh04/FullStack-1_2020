@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Test-1</title>
+    <style>
+        .root{
+            background-color: grey;
+        }
+        .container p:nth-child(even){
+            color: red;
+        }
+        p:only-child{
+            color: green;
+            
+        }
+        p:first-child::first-letter{
+            text-transform: capitalize;
+            
+        }
+        p:last-child::before{
+            font-family: 'Font Awesome';
+            content: '\f058';
+            display: inline;
+            margin: 10px;
+
+        }
+        p:empty{
+            width: 60px;
+            height: 60px;
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>this is para 1</p>
+        <p><!--This is para 2--></p>
+        <p>This is para-3</p>
+        <p>This is para-4</p>
+        <div>
+            <p>this is para-5</p>
+        </div>
+    </div>
+</body>
+</html>
