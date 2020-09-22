@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Element</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <form action="data.html" method="GET">
+        <!--<label for="text-1">Text Box-1</label>
+        <input type="text" name="text-1" id="text1" value="1000" size="10" readonly>
+        <br><br>
+        <label for="text-2">Text Box-2</label>
+        <input type="text" name="text-2" id="text2" value="There is more text to be displayed in this text box" size="30">-->
+        <!--<label for="uname">Username</label>-->
+        <input type="text" name="uname" id="uname" placeholder="Username" required>
+        <br>
+        <br>
+        <!--<label for="pass">Password</label>-->
+        <input type="password" name="pwd" id="pass" pattern=[A-Z][A-Za-z0-9]*[0-9][a-zA-Z0-9]* placeholder="Password" title="A valid password must contain alphabets and numbers, first charcter should be capital and must contain a number and there's no special charcter" required>
+        <br><br>
+        <input type="checkbox" name="chk" id="" onclick="showpwd()">Show Password
+        
+        <br><br>
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" id="gender" checked value="male">Male
+        <input type="radio" name="gender" id="gender" value="female">Female
+        <input type="radio" name="gender" id="gender" value="other">Other
+        <br><br>
+        <label for="technology">Technologies:</label>
+        <input type="checkbox" name="chk1" id="technology" value="C Language" checked>Language
+        <input type="checkbox" name="chk2" id="technology" value="java">Java
+        <input type="checkbox" name="chk3" id="technology" value="front-end">Front-End
+        <br><br>
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" min="18" max="80" step="2">
+        <br><br>
+        <label for="knowledge">Knowledge Level</label>
+        <input type="range" name="range" id="knowledge" min="0" max="50" >
+        <br><br>
+        <label for="dob">DOB</label>
+        <input type="date" name="dob" id="dob">
+        <br><br>
+        <label for="dot">DOT</label>
+        <input type="time" name="dot" id="dot">
+        <br><br>
+        <label for="dobt">DOB with Time</label>
+        <input type="datetime-local" name="dobt" id="dobt">
+        <br><br>
+        <label for="month">Current Month</label>
+        <input type="month" name="month" id="month">
+        <br><br>
+        <label for="week">Current Week</label>
+        <input type="week" name="week" id="week">
+        <br><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" pattern="">
+        <br><br>
+        <label for="file">Upload your document</label>
+        <input type="file" name="file" id="file" accept=".txt, .pdf">
+        <br><br>
+        <label for="search">Search</label>
+        <input type="search" name="search" id="search">
+        <br><br>
+        <label for="website">Website</label>
+        <input type="url" name="website" id="website">
+        <br><br>
+
+        <input type="submit" value="Submit">
+        <input type="button" value="Click Me" onclick="alert('This is button event')">
+        <input type="image" src="img/bear.jpg" alt="submitbtn" name="submitbtn">
+    </form>
+    <script>
+        function showpwd()
+        {
+            var x = document.getElementById("pass");
+            if(x.type==='password')
+            {
+                x.type="text";
+            }
+            else
+            {
+                x.type="password";
+            }
+        }
+    </script>
+</body>
+</html>

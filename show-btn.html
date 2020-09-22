@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Button</title>
+</head>
+<body>
+    <form action="">
+        <input type="password" name="pwd" id="pwd" placeholder="Enter Password"> 
+        <input type="password" name="pwd" id="pwd1">
+        <br>
+        <input type="checkbox" name="chk" id="" onclick="showpwd();"/>Show Password
+
+    </form>
+    <script>
+        function showpwd()
+        {
+            var x = document.getElementById("pwd")
+            var x1 = document.getElementById("pwd1")
+
+            if(x.type=='password')
+            {
+                x.type="text";
+            }
+            else{
+                x.type='password';
+            }
+            if(x1.type=='password')
+            {
+                x1.type="text";
+            }
+            else{
+                x1.type='password';
+            }
+
+        }
+    </script>
+</body>
+</html>
