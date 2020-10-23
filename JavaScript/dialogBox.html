@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dialog Boxes</title>
+</head>
+<body>
+    <button id="btn" onclick="alert('I am a Dialog Box')">Click Me</button>
+    <button id="btn" onclick="hello()">Click Me</button>
+    <button id="btn" onclick="heyy()">Click Me</button>
+    <button id="btn" onclick="no()">Click Me</button>
+
+    <script>
+        function hello()
+        {
+            /*var x = 10;
+            var y = 20;
+            alert("Sum of two numbers =" + (x+y));*/
+
+            var x = confirm("Do you want to save the data?");
+            if(x)
+            {
+                alert("Data saved successfully.");
+            }
+            else{
+                alert("Data not saved!");
+            }
+        }
+        function heyy()
+        {
+            var x = prompt("Enter your name.");
+            if(x.length>0 && x != "null")
+            {
+                alert(x);
+            }
+            else{
+                alert("Anonymous");
+            }
+        }
+        function no(){
+            var x = parseInt(prompt("Enter a nu"));
+            //var x = Number(prompt("Enter a nu"));
+            var y = parseInt(prompt("Enter a no."));
+            var z = x+y;
+            if(x+y>50){
+                alert(x+y);
+            }
+            else{
+                alert("You're bad");
+            }
+        }
+        
+    </script>
+    <noscript>
+        <p style="color: red">Your javaSript is diabled. Kindly enable it to get the benefit.</p>
+    </noscript>
+</body>
+</html>
