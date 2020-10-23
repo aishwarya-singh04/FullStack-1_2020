@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaSript Code</title>
+</head>
+<body>
+    <div id="container"></div>
+    <button id="btn">Click Me</button>
+
+    <script>
+        var x = document.getElementById("container");
+        // console.log(x);
+        x.style.width = "200px";
+        x.style.height = "200px";
+        x.style.backgroundColor ="red";
+        x.style.marginBottom= "20px";
+        x.innerHTML = "dynamic text added";
+        x.innerHTML.blink
+
+        var y = document.getElementById("btn");
+        y.onclick = function(){
+            alert("Hello !! This is an Event");
+            x.style.backgroundColor ="blue";
+        };
+    </script>
+</body>
+</html>
