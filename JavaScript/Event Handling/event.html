@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Handling</title>
+    <style>
+        #container{
+            width: 300px;
+            height: 200px;
+            background-color: blue;
+            margin: 10px auto;
+        }
+        button{
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    1. HTML Handler Attribute
+    <button onclick="myfun()">Click me!</button>
+    <script>
+        function myfun(){
+            var x= document.getElementById("container");
+            x.style.background="green";
+        }
+
+        // 2. DOM Level-1 Javascript handler
+        //Function calling way-1
+
+        var btn=document.querySelector('button');
+        btn.onclick=myfun;
+        btn.onclick=function(){
+            document.body.style.background="grey";
+        };
+
+        //DOM Level-2 JavaScript Event Handler(addEventListner)
+        var box=document.getElementById("container");
+        box.addEventListener('mouseover',abc);
+        box.addEventListener('mouseover',abc1);
+        function abc(){
+            box.style.background="pink";
+        }
+        function abc1(){
+            box.style.border="10px solid yellow";
+            box.style.borderRadius="20px";
+            box.innerText="DOM Level-2 JavaScript Event Handler(addEventListner)";
+        }
+
+        box.addEventListener("mouseout",function(){
+            box.style.background="blue";
+            box.style.color="white";
+            box.style.border="none";
+            box.style.textAlign="center";
+            box.style.borderRadius="0px";
+        })
+
+        box.removeEventListener("mouseover",abc1);
+
+        //Anonymous Function as Event Handler cannot be removed
+    </script>
+
+    
+</body>
+</html>

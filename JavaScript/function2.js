@@ -14,4 +14,4 @@ console.log(y(7));
 
 
 //A function can call itself
-(function(name){console.log(name)}) (aish);
+(function(name){console.log(name)}) ("aish");
