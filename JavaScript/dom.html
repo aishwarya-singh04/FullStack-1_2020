@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        THIS IS FIRST TEXT.
+        <p class="para" id="para1">this is para 1</p>
+        THIS IS SECOND TEXT. 
+        <h1>This is heading</h1>
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <p class="para" id="para2">this is second para</p>
+    </div>
+
+    <script>
+        var x= document.getElementById("para1");   //getElementByClassName
+        console.log(x);
+        var y= document.querySelector("h1");
+        console.log(y);
+        y.setAttribute("id","head1");
+        y.classList.add("my-class");                    //.remove
+        y.classList.toggle("new-class");
+        
+        var z= document.querySelectorAll("li");   //getElementByTagName
+        console.log(z);
+        z[1].style.color="blue";
+        z[2].innerHTML="<b>Aishwarya Singh</b> <button>Click Me</button>";
+
+        var c =document.getElementById("container");
+        
+        console.log(c.childNodes[3].textContent("Beta-Labs"));
+        console.log(c.childNodes[1].nextSibling.textContent.style.color="blue");
+        console.log(c.lastChild.textContent="hello");
+        console.log(c.lastChild.parentNode);
+        
+
+    </script>
+</body>
+</html>

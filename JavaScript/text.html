@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="blog">
+        this element is <strong>strong</strong> and has some             super fun features
+    </div>
+
+    <script>
+        x = document.getElementById("blog");
+
+        console.log(x.innerHTML='<a href ="Assignment15.html">My project</a>');                        //return internal tags used with text
+        console.log(x.innerText);                       //return text only
+        console.log(x.textContent);                     //add and return whitespace
+    </script>
+</body>
+</html>
