@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Regular Expression</title>
+</head>
+<body>
+    <p>THis session is based on js reg exp</p>
+    <button onclick="myFunction()">Click Me</button>
+    <p id="demo"></p>
+
+    <script>
+        function myFunction()
+        {
+            var str= "Welcome to Beta-Labs to learn JavaScript to know more click \n Welcome to Beta-Labs to learn JavaScript to know more click Welcome to Beta-Labs to learn JavaScript to know more click \n Welcome to Beta-Labs to learn JavaScript to know more click Welcome to Beta-Labs to learn JavaScript to know more click \n Welcome to Beta-Labs to learn JavaScript to know more click 7564356 and get 100% assurance!";
+            var pattern= /[^a-c]/gi;
+            //var pattern= /[^5]/gi;                          //ignore 5
+            var pattern= /\w/gi;                                //looks for word
+            var pattern= /\W\S/gi;                                 //no word charachter
+            var pattern= /\d/gi;                                   //checks digits
+            var res= str.match(pattern);                    //checks only one match
+            document.getElementById("demo").innerHTML=res;
+
+            //   /^([a-zA-Z0-9\._]+)@([a-zA-Z])\.([a-zA-Z]{2,3})$/g                 //regex for gmail
+        }
+    </script>
+</body>
+</html>
