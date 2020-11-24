@@ -4,9 +4,11 @@ const username= document.getElementById('username');
 const email= document.getElementById('email');
 const password1= document.getElementById('password1');
 const password2= document.getElementById('password2');
-const small= document.getElementById('small');
+const small= document.querySelector('small');
 
 //Event Handlers
+
+//form submission
 form.addEventListener('submit', function(e){
     e.preventDefault();                     //to stop submission
     checkInput();
@@ -14,13 +16,17 @@ form.addEventListener('submit', function(e){
 //Functions
 function checkInput()
 {
-    const usernameValue = username.value.trim();
+    const usernameValue = username.value.trim();    //trim() to remove whitespacesh
     const emailValue = email.value.trim();
     const password1Value = password1.value.trim();
     const password2Value = password2.value.trim();
 
     if(usernameValue===''){
         showError(username, "Username can't be blank");
+    }
+    else if(!isUsernameValid(usernameValue))
+    {
+        showError(username, "Username can have small letters and underscores only");
     }
     else {
         showSuccess(username);
@@ -31,7 +37,7 @@ function checkInput()
     }
     else if(!isEmailValid(emailValue))
     {
-        showError(email, "Email Id inavalid");
+        showError(email, "Email Id is inavalid");
     }
     else{
         showSuccess(email);
@@ -64,9 +70,11 @@ function showSuccess(input)
 {
     const formControl = input.parentNode;
     formControl.className = 'form-control success';
-    
 }
 function isEmailValid(email)
 {
-    return /^([a-zA-Z0-9_\.\-\+]+)@([[a-zA-Z0-9]+]+)\.([a-zA-Z]{2,3}$/.test(email)
+    return /^([a-zA-Z0-9_\.\-\+]+)@([a-zA-Z0-9]+)\.([a-zA-Z]{2,3})$/.test(email);
+}
+function isUsernameValid(username){
+    return /^[a-z_]+$/.test(username);
 }
