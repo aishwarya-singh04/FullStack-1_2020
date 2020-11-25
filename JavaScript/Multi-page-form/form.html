@@ -4,15 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Multi Page Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
     <div class="container">
         <form id="form1">
             <h3>Create Account</h3>
-            <input type="text" placeholder="Enter Email" required>
-            <input type="password" placeholder="Enter Password" required>
-            <input type="password" placeholder="Confirm Password" required>
+            <div class="form-control">
+                <input type="text" placeholder="Enter Email" id="email" required>
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
+            <div class="form-control">
+                <input type="password" placeholder="Enter Password" id="password1" required>
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
+            <div class="form-control">
+                <input type="password" placeholder="Confirm Password" id="password2" required>
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
             <div class="btn-box">
                 <button type="button" id="next1">Next</button>
             </div>
@@ -29,9 +47,24 @@
         </form>
         <form id="form3">
             <h3>Peronal Information</h3>
-            <input type="text" placeholder="First Name" required>
-            <input type="text" placeholder="Last Name" required>
-            <input type="number" placeholder="Mobile No." required>
+            <div class="form-control">
+                <input type="text" placeholder="First Name" id="firstname" required>
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
+            <div class="form-control">
+                <input type="text" placeholder="Last Name" id="lastname" required>
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
+            <div class="form-control">
+                <input type="number" placeholder="Mobile No." id="mobile" required>
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
             <div class="btn-box">
                 <button type="button" id="back2">Back</button>
                 <button type="button">Submit</button>
