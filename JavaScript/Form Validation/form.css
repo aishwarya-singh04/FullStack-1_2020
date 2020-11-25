@@ -68,21 +68,21 @@ body{
     background-color: darkslateblue;
     color: white;
 }
-.form-control .success input{
+.form-control.success input{
     border-color: green;
 }
-.form-control .success .fa-check-circle{
+.form-control.success .fa-check-circle{
     visibility: visible;
     color: green;
 }
-.form-control .error input{
+.form-control.error input{
     border-color: red;
 }
-.form-control .error .fa-exclamation-circle{
+.form-control.error .fa-exclamation-circle{
     color: red;
     visibility: visible;
 }
-.form-control .error small{
+.form-control.error small{
     visibility: visible;
     color: red;
 }
