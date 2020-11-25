@@ -19,7 +19,7 @@ body{
     position: relative;
     /*to hide everything outside the div container*/
     /*this will help in hiding the shadow on top and the extra progress bar*/
-    /*overflow: hidden; */
+    overflow: hidden;
     
 }
 .container form{
